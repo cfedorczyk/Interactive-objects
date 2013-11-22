@@ -2,14 +2,17 @@ class Mover {
   PVector loc;
   PVector vel;
   int d;
+  int hue;
 
   Mover() {
     loc = new PVector(random(width), random(height));
     vel = PVector.random2D();
     d = 20;
+    hue = 0;
   }
 
   void display() {
+    fill(hue, 100, 100);
     ellipse(loc.x, loc.y, d, d);
   }
 
@@ -28,10 +31,24 @@ class Mover {
       loc.y = height + d/2;
     }
   }
-  void checkCircle(){
-   if(dist(mouseX,mouseY,loc.x,loc.y) < d/2){
-    print("I'm not touching you! ");
-   } 
+
+  boolean checkCircle() {
+    if (dist(mouseX, mouseY, loc.x, loc.y) < d/2) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  void colorChange(int step) {
+    hue+=step;
+    if (hue > 360) {
+      hue = 0;
+    }
+  }
+
+  void newLocation() {
+    loc.set(random(width), random(height));
   }
 }
 

@@ -13,7 +13,10 @@ void draw() {
   for (int i = 0; i < m.length; i++) {
     m[i].move();
     m[i].display();
-    m[i].checkCircle();
+    if (m[i].checkCircle()) {    //use checkCircle() to identify if a circle is being touched
+      m[i].colorChange(20); 
+      m[i].newLocation();
+    }
   }
 }
 

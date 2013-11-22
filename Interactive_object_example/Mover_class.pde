@@ -28,5 +28,10 @@ class Mover {
       loc.y = height + d/2;
     }
   }
+  void checkCircle(){
+   if(dist(mouseX,mouseY,loc.x,loc.y) < d/2){
+    print("I'm not touching you! ");
+   } 
+  }
 }
 

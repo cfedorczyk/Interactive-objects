@@ -53,7 +53,7 @@ class Mover {
 
   void checkObstacle(Obstacle o) {
     if (loc.dist(o.loc) < d/2 + o.d/2) {
-      newLocation();
+      colorChange(2);
     }
   }
 }

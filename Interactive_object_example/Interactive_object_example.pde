@@ -1,4 +1,4 @@
-Mover[] m = new Mover[50];
+Mover[] m = new Mover[30];
 Obstacle obs;
 
 void setup() {

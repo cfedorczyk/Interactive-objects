@@ -1,0 +1,1 @@
+This repository contains examples related to making objects interact with the user or with other objects.
